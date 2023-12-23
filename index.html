@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anany Pranav Singh</title>
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://kit.fontawesome.com/40db2a7b6b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Machine Learning Engineer</p>
+                <h1>Hi, I'm<span> Anany Pranav Singh </span><br>from India </h1>
+            </div>
+        </div>
+</div>
+<!--------------about--------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="image/me2.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Debitis, quis doloribus et nulla omnis deserunt eum 
+                     nihil nemo amet deleniti, blanditiis similique vitae aliquid,
+                     nisi asperiores quasi laudantium placeat. Aspernatur.</p>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                     </div>
+
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Machine Learning</span><br>Python, Tenserflow, OpenCV, Keras</li>
+                            <li><span>Web Develovpment</span><br>HTML, CSS, Javascript, ReactJS, NodeJS</li>
+                            <li><span>Cloud Computing</span><br>Docker, Kubernetes, AWS, GCP</li>
+                            <li><span>Programming Languages</span><br>C, C++, Python, JavaScript,</li>
+
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current</span><br>BTech CSE (Data Science) </li>
+                            <li><span>2019 - 2021</span><br>Intermediate</li>
+                            <li><span>2018 - 2019</span><br>High School</li>
+
+                        </ul>
+                     </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--------------------------services--------------------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+             <div>
+                <i class="fa-solid fa-robot"></i>
+                <h2>Machine Learning</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Debitis, quis doloribus et nulla omnis deserunt eum 
+                     nihil nemo amet deleniti, blanditiis similique vitae aliquid,
+                     nisi asperiores quasi laudantium placeat. Aspernatur.
+                </p>
+             </div>
+             <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Develovpment</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Debitis, quis doloribus et nulla omnis deserunt eum 
+                     nihil nemo amet deleniti, blanditiis similique vitae aliquid,
+                     nisi asperiores quasi laudantium placeat. Aspernatur.
+                </p>
+             </div>
+             <div>
+                <i class="fa-solid fa-hard-drive"></i>
+                <h2>Cloud Computing</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Debitis, quis doloribus et nulla omnis deserunt eum 
+                     nihil nemo amet deleniti, blanditiis similique vitae aliquid,
+                     nisi asperiores quasi laudantium placeat. Aspernatur.
+                </p>
+             </div>
+        </div>
+
+    </div>
+</div>
+
+<!------------------------------Portfolio--------------------------------------->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/ml1.jpeg" class="work">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Coming Soon</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/ml2.jpeg" class="work">
+                <div class="layer">
+                    <h3>Streaming App</h3>
+                    <p>Coming Soon</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/ml3.jpeg" class="work">
+                <div class="layer">
+                    <h3>Computer Vision App</h3>
+                    <p>Coming Soon</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+    
+</body>
+</html>
