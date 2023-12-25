@@ -11,16 +11,16 @@
 <div id="header">
         <div class="container">
             <nav>
-                <img src="logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <i class="fa-solid fa-times"></i>
+                <img src="" alt="">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-times" onclick="closemenu()"></i>
                 </ul>
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Machine Learning Engineer</p>
@@ -37,10 +37,34 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Debitis, quis doloribus et nulla omnis deserunt eum 
-                     nihil nemo amet deleniti, blanditiis similique vitae aliquid,
-                     nisi asperiores quasi laudantium placeat. Aspernatur.</p>
+                <style>
+                    .highlight-text{
+                        color: #ff004f;
+                    }
+                </style>
+                    <p>
+                        Hey there! I'm <span class="highlight-text">Anany Pranav Singh</span>, a passionate computer science enthusiast currently pursuing BTech in CSE with a focus on Data Science. My journey into the world of technology is fueled by a curiosity about how innovations can enhance human life. <br>
+                        
+                        <span class="highlight-text">Tech Enthusiast & Learner</span><br>
+                        
+                        My coding adventures started with the basics of HTML, CSS, and C, and I've since delved into the world of Python, where I aim to become proficient in both its general use and its application in machine learning. Always on the lookout for the next tech breakthrough, I'm eager to explore and master React, JavaScript, Node.js, Express.js, and the intricacies of backend development. <br>
+                        
+                        <span class="highlight-text">Coding Journey</span><br>
+                        
+                        As a coder, I find joy in transforming ideas into reality through lines of code. Whether it's crafting elegant frontend interfaces or engineering robust backend systems, I'm committed to continuous learning and improvement. <br>
+                        
+                        <span class="highlight-text">Learning Explorer</span><br>
+                        
+                        Fascinated by the potential of machine learning, I specialize in predictive modeling, data analysis, and building custom ML solutions. Let's turn data into insights and shape the future with intelligent algorithms. <br>
+                        
+                        <span class="highlight-text">Beyond the Code</span><br>
+                        
+                        When not immersed in the digital realm, you can find me pondering tech's impact on our lives, exploring the latest tech trends, or perhaps engaging in a lengthy conversation about the wonders of technology. <br>
+                        
+                        Let's connect, collaborate, and bring innovative ideas to life!
+                        
+                        
+                    </p>
 
                      <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -166,7 +190,7 @@
                 <p><i class="fa-solid fa-paper-plane"></i>ananypranavsingh@gmail.com</p>
                 <div class="social-icons">
                     <a href="https://www.github.com/ananypranavsingh"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/ananypranavsingh"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/ananypranavsingh"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.x.com/ananypranavsngh"><i class="fa-brands fa-square-x-twitter"></i></a>
                     <a href="https://www.instagram.com/ananypranavsingh"><i class="fa-brands fa-instagram"></i></a>
 
@@ -174,7 +198,7 @@
                 <!-- <a href="images/cv.pdf" download class="btn btn2">Download CV</a> -->
             </div>
             <div class="contact-right">
-                    <form action="">
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
@@ -206,8 +230,31 @@
     }
 
 </script>
-    
 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+    
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzMoCMiOvS05DOHX7oksrkby_XNBjmz1wG6LdwJHKnt-XDBxbiHLfLUtVglqkoY2yCX/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 
 </body>
