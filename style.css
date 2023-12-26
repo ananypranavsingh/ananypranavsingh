@@ -306,9 +306,23 @@ nav ul li a:hover::after{
 }
 
 .btn.btn2{
-    display: inline-block;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    background: #000000;
+    transition: background 0.5s;
+}
+.btn.btn2:hover{
     background: #ff004f;
 }
+
 
 .contact-right form{
     width: 100%;
@@ -366,7 +380,7 @@ nav .fa-solid{
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        background: rgba(255, 255, 255, 0.329);
         position: fixed;
         top: 0;
         right: -200px;
@@ -375,6 +389,7 @@ nav .fa-solid{
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
+        backdrop-filter: blur(5px);
     }
     nav ul li{
         display: block;
@@ -408,4 +423,10 @@ nav .fa-solid{
     .copyright{
         font-size: 14px;
     }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }
